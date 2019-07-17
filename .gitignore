@@ -1,0 +1,5 @@
+# API configs
+apis/
+
+# Node modules
+backend/node_modules

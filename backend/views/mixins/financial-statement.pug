@@ -1,0 +1,12 @@
+include table-data.pug
+
+mixin financial-statement(name, accounts, amounts)
+    br
+    h2= name
+    hr
+    table        
+        tbody
+            each account, index in accounts
+                tr
+                    th= account
+                    +table-data(amounts[index])

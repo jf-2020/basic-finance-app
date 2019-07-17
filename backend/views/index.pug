@@ -1,0 +1,11 @@
+extends layout
+
+include mixins/financial-statement.pug
+
+block content
+    h1 Testing Statement Tabulation
+    hr
+
+    +financial-statement('Income Statement', accounts_inc, amounts_inc)
+    +financial-statement('Balance Sheet', accounts_bs, amounts_bs)
+    +financial-statement('Cash Flow Statement', accounts_cf, amounts_cf)
