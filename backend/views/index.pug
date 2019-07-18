@@ -3,7 +3,7 @@ extends layout
 include mixins/financial-statement.pug
 
 block content
-    h1 Testing Statement Tabulation
+    h1= company
     hr
 
     +financial-statement('Income Statement', accounts_inc, amounts_inc)
