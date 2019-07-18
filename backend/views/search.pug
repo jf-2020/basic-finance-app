@@ -1,0 +1,9 @@
+extends layout
+
+block content
+    form(action="/search", method="POST", class="form clearfix")
+        div(class="field")
+            label(class="label") Company Name
+            div(class="control")
+                input(class="input", type="text", name="query", placeholder="ABC Co.")
+            p(class="help") Enter a company's name with correct spelling.

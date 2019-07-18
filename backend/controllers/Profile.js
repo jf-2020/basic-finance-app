@@ -6,6 +6,8 @@ exports.getCompanyFinancialProfile = async (req, res) => {
     const dataObj = new Data('COMPANY NAME', ticker.toUpperCase());
     const { income, balance, cashflow } = await dataObj.fetchAnnualData();
 
+    // REFACTOR BELOW INTO MODEL //
+
     // extract account names as an array and also extract amounts in each 
     // account for each year as an array
     const inc_accts = [],
@@ -31,7 +33,7 @@ exports.getCompanyFinancialProfile = async (req, res) => {
         cf_amnts.push(obj.values);
     });
 
-    res.render('index',
+    res.render('profile',
         {
             title: dataObj.ticker,
             company: dataObj.co,
